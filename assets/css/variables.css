@@ -1,0 +1,116 @@
+
+:root {
+  --card-bg: #0d1117;
+  --accent-color: #2dd4bf; /* Teal/Cyan */
+  --accent-glow: rgba(45, 212, 191, 0.2);
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --nav-bg: #221810;
+  --border-color: rgba(255, 255, 255, 0.1);
+
+  /* Dark */
+  --dark-primary: rgb(255, 182, 139);
+  --dark-on-primary: rgb(82, 35, 0);
+  --dark-primary-container: rgb(117, 52, 0);
+  --dark-on-primary-container: rgb(255, 219, 201);
+
+  --dark-secondary: rgb(148, 204, 255);
+  --dark-on-secondary: rgb(0, 51, 82);
+  --dark-secondary-container: rgb(0, 74, 116);
+  --dark-on-secondary-container: rgb(205, 229, 255);
+
+  --dark-tertiary: rgb(204, 201, 146);
+  --dark-on-tertiary: rgb(51, 50, 9);
+  --dark-tertiary-container: rgb(74, 72, 30);
+  --dark-on-tertiary-container: rgb(232, 229, 172);
+
+  /* Error States */
+  --dark-error: rgb(255, 180, 171);
+  --dark-on-error: rgb(105, 0, 5);
+  --dark-error-container: rgb(147, 0, 10);
+  --dark-on-error-container: rgb(255, 180, 171);
+
+  /* Surface & Background */
+  --dark-background: rgb(32, 26, 23);
+  --dark-on-background: rgb(236, 224, 219);
+  --dark-surface: rgb(32, 26, 23);
+  --dark-on-surface: rgb(236, 224, 219);
+  --dark-surface-variant: rgb(82, 68, 60);
+  --dark-on-surface-variant: rgb(215, 194, 184);
+  --dark-surface-disabled: rgba(236, 224, 219, 0.12);
+  --dark-on-surface-disabled: rgba(236, 224, 219, 0.38);
+
+  /* Navigation & Utility */
+  --dark-outline: rgb(159, 141, 132);
+  --dark-outline-variant: rgb(82, 68, 60);
+  --dark-shadow: rgb(0, 0, 0);
+  --dark-scrim: rgb(0, 0, 0);
+  --dark-backdrop: rgba(58, 46, 39, 0.4);
+
+  /* Inverse Colors */
+  --dark-inverse-surface: rgb(236, 224, 219);
+  --dark-inverse-on-surface: rgb(54, 47, 44);
+  --dark-inverse-primary: rgb(153, 70, 0);
+
+  /* Elevation Levels */
+  --dark-elevation-level0: transparent;
+  --dark-elevation-level1: rgb(43, 34, 29);
+  --dark-elevation-level2: rgb(50, 39, 32);
+  --dark-elevation-level3: rgb(57, 43, 36);
+  --dark-elevation-level4: rgb(59, 45, 37);
+  --dark-elevation-level5: rgb(63, 48, 39);
+
+  /* Light */
+  --light-primary: rgb(153, 70, 0);
+  --light-on-primary: rgb(255, 255, 255);
+  --light-primary-container: rgb(255, 219, 201);
+  --light-on-primary-container: rgb(50, 18, 0);
+
+  --light-secondary: rgb(0, 99, 153);
+  --light-on-secondary: rgb(255, 255, 255);
+  --light-secondary-container: rgb(205, 229, 255);
+  --light-on-secondary-container: rgb(0, 29, 50);
+
+  --light-tertiary: rgb(98, 96, 51);
+  --light-on-tertiary: rgb(255, 255, 255);
+  --light-tertiary-container: rgb(232, 229, 172);
+  --light-on-tertiary-container: rgb(29, 29, 0);
+
+  /* Error Feedback */
+  --light-error: rgb(186, 26, 26);
+  --light-on-error: rgb(255, 255, 255);
+  --light-error-container: rgb(255, 218, 214);
+  --light-on-error-container: rgb(65, 0, 2);
+
+  /* Surface & Background */
+  --light-background: rgb(255, 251, 255);
+  --light-on-background: rgb(32, 26, 23);
+  --light-surface: rgb(255, 251, 255);
+  --light-on-surface: rgb(32, 26, 23);
+  --light-surface-variant: rgb(244, 222, 212);
+  --light-on-surface-variant: rgb(82, 68, 60);
+  --light-surface-disabled: rgba(32, 26, 23, 0.12);
+  --light-on-surface-disabled: rgba(32, 26, 23, 0.38);
+
+  /* Borders & Effects */
+  --light-outline: rgb(133, 116, 107);
+  --light-outline-variant: rgb(215, 194, 184);
+  --light-shadow: rgb(0, 0, 0);
+  --light-scrim: rgb(0, 0, 0);
+  --light-backdrop: rgba(58, 46, 39, 0.4);
+
+  /* Inversion (Used for high-contrast elements) */
+  --light-inverse-surface: rgb(54, 47, 44);
+  --light-inverse-on-surface: rgb(251, 238, 233);
+  --light-inverse-primary: rgb(255, 182, 139);
+
+  /* Elevation Tones */
+  --light-elevation-level0: transparent;
+  --light-elevation-level1: rgb(250, 242, 242);
+  --light-elevation-level2: rgb(247, 237, 235);
+  --light-elevation-level3: rgb(244, 231, 227);
+  --light-elevation-level4: rgb(243, 229, 224);
+  --light-elevation-level5: rgb(241, 226, 219);
+}

@@ -1,0 +1,129 @@
+---
+layout: default
+---
+{% include header.html %}
+
+<main class="projects-page">
+  <section class="projects-hero container">
+    <div class="projects-title-area">
+      <h1><span class="highlight">Projects</span></h1>
+    </div>
+    <div class="projects-filter-wrapper">
+      <div class="projects-filter">
+        <button class="filter-btn active">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h6v6H4zM14 4h6v6h-6zM4 14h6v6H4zM14 14h6v6h-6z"/></svg>
+          All Projects
+        </button>
+        <button class="filter-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          Engineering
+        </button>
+        <button class="filter-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+          Design
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects-bento container">
+    <!-- Card 1 (Span 2) -->
+    <div class="bento-card span-2 horizontal-card">
+      <div class="bento-img bg-wave"></div>
+      <div class="bento-content">
+        <div class="project-tags">
+          <span class="tag">Rust</span>
+          <span class="tag">WebAssembly</span>
+          <span class="tag">gRPC</span>
+        </div>
+        <h3>Distributed Systems Monitor</h3>
+        <p>A high-performance dashboard for visualizing microservices traffic in real-time. Built with Rust for the backend and compiled to WASM for edge-computing capabilities.</p>
+        <div class="card-footer">
+          <span class="study-label">ENGINEERING CASE STUDY</span>
+          <a href="#" class="icon-link">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 (Span 1) -->
+    <div class="bento-card span-1">
+      <div class="bento-img bg-dashboard"></div>
+      <div class="bento-content">
+        <div class="project-tags">
+          <span class="tag">Figma</span>
+          <span class="tag">Design Systems</span>
+        </div>
+        <h3>Fintech Dashboard</h3>
+        <p>Comprehensive design system for a banking application, focusing on accessibility and dark mode adaptability.</p>
+        <a href="#" class="view-link">View Project &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Card 3 (Span 1) -->
+    <div class="bento-card span-1">
+      <div class="bento-img bg-art"></div>
+      <div class="bento-content">
+        <div class="project-tags">
+          <span class="tag">Three.js</span>
+          <span class="tag">WebGL</span>
+        </div>
+        <h3>Generative Art Tool</h3>
+        <p>Browser-based 3D editor allowing users to sculpt meshes using noise algorithms.</p>
+        <a href="#" class="view-link">View Project &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Card 4 (Span 1) -->
+    <div class="bento-card span-1">
+      <div class="bento-img bg-server"></div>
+      <div class="bento-content">
+        <div class="project-tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">GraphQL</span>
+        </div>
+        <h3>API Gateway Layer</h3>
+        <p>A custom gateway solution handling auth, rate-limiting, and schema stitching.</p>
+        <a href="#" class="view-link">View Project &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Card 5 (Span 1) -->
+    <div class="bento-card span-1">
+      <div class="bento-img bg-health"></div>
+      <div class="bento-content">
+        <div class="project-tags">
+          <span class="tag">UX Research</span>
+          <span class="tag">Prototyping</span>
+        </div>
+        <h3>Health App UX</h3>
+        <p>User journey mapping and high-fidelity prototypes for a wellness tracking application.</p>
+        <a href="#" class="view-link">View Project &rarr;</a>
+      </div>
+    </div>
+
+    <!-- Card 6 (Span 3) -->
+    <div class="bento-card span-3 horizontal-card flip">
+      <div class="bento-content">
+        <div class="project-tags">
+          <span class="tag">React</span>
+          <span class="tag">D3.js</span>
+          <span class="tag">WebGL</span>
+        </div>
+        <h3>Neural Network Visualizer</h3>
+        <p>An interactive educational tool that demystifies machine learning. Users can adjust hyperparameters and watch the neural network learn in real-time through a custom WebGL rendering engine.</p>
+        <div class="card-footer-btns">
+          <a href="#" class="btn-primary-small">View Case Study</a>
+          <a href="#" class="btn-secondary-small">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+            View Source
+          </a>
+        </div>
+      </div>
+      <div class="bento-img bg-circuit"></div>
+    </div>
+  </section>
+</main>
+
+{% include footer.html %}

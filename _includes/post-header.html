@@ -1,0 +1,10 @@
+<div class="post-header-container">
+  <div class="post-meta-tags">
+    <span class="tag-badge">{{ page.category | default: "Engineering" }}</span>
+    <span class="post-date">{{ page.date | date: "%B %d, %Y" }}</span>
+  </div>
+  <h1 class="post-title">{{ page.title }}<span class="accent-dot">.</span></h1>
+  {% if page.description %}
+  <p class="subtitle">{{ page.description }}</p>
+  {% endif %}
+</div>

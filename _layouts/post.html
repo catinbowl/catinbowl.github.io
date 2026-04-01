@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% include header.html %}
+
+<main class="container post-container">
+  {% include post-header.html %}
+  
+  <div class="post-grid">
+    <article class="post-content">
+      {{ content }}
+    </article>
+  </div>
+
+  {% include post-cta.html %}
+</main>
+
+{% include footer.html %}

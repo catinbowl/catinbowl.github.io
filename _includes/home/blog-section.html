@@ -1,0 +1,35 @@
+<div class="container">
+  <section>
+    <div class="work-header">
+      <div class="work-title">
+        <div class="title-line"></div>
+        <h2>Blog Posts</h2>
+      </div>
+      <a href="/blog" class="view-all">
+        View All
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3.33331 8H12.6666M12.6666 8L8.66665 4M12.6666 8L8.66665 12" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+
+    <div class="projects-grid">
+      {% for post in site.posts offset:1 %}
+        {% assign card_image = post.image | default: "/assets/images/svg-anim.jpg" %}
+        {% assign card_tag = post.category | default: "Design" %}
+        {% assign card_date = post.date | date: "%b %d, %Y" %}
+        {% assign card_desc = post.description | default: post.excerpt | strip_html | truncatewords: 20 %}
+        
+        {% include blog-card.html
+          image=card_image
+          tag=card_tag
+          date=card_date
+          title=post.title
+          desc=card_desc
+          url=post.url
+        %}
+      {% endfor %}
+    </div>
+  </section>
+</div>

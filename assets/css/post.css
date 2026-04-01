@@ -1,0 +1,275 @@
+/* Post Layout Additions (based on Hire Me design) */
+.post-container {
+  padding: 4rem 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.post-header-container {
+  margin-bottom: 4rem;
+}
+
+.post-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.accent-dot {
+  color: #2DD4BF;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  color: #94A3B8;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.post-meta-tags {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.tag-badge {
+  color: var(--accent-color, #2DD4BF);
+  background: rgba(45, 212, 191, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 1px solid rgba(45, 212, 191, 0.2);
+}
+
+.post-date {
+  color: #64748B;
+  font-size: 0.875rem;
+  font-family: monospace;
+}
+
+.post-grid {
+  margin-bottom: 5rem;
+}
+
+/* Post Content Typography */
+.post-content {
+  color: #94A3B8;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.post-content h2, .post-content h3, .post-content h4 {
+  color: #fff;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.post-content h2 { font-size: 1.75rem; }
+.post-content h3 { font-size: 1.5rem; }
+
+.post-content p {
+  margin-bottom: 1.5rem;
+}
+
+.post-content ul, .post-content ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.post-content li {
+  margin-bottom: 0.5rem;
+}
+
+.post-content strong {
+  color: #e2e8f0;
+}
+
+.post-content a {
+  color: #2DD4BF;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(45, 212, 191, 0.3);
+  transition: all 0.2s;
+}
+
+.post-content a:hover {
+  border-bottom-color: #2DD4BF;
+  color: #fff;
+}
+
+.post-content blockquote {
+  border-left: 4px solid #2DD4BF;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #cbd5e1;
+  background: rgba(45, 212, 191, 0.05);
+  padding: 1.5rem;
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.post-content pre {
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 1.25rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin-bottom: 2rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: #e2e8f0;
+}
+
+.post-content code {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.85rem;
+  color: #2DD4BF;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* Sidebar - Author Card */
+.author-card {
+  background: rgba(4, 31, 31, 0.4);
+  border: 1px solid rgba(45, 212, 191, 0.2);
+  border-radius: 1.5rem;
+  padding: 2rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.author-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #2DD4BF;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.author-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid #0d1117;
+}
+
+.author-avatar.a1 { background: #FCD34D; }
+
+.author-info h3 {
+  font-size: 1.125rem;
+  color: #fff;
+  margin: 0 0 0.1rem 0;
+}
+
+.author-info span {
+  font-size: 0.875rem;
+  color: #64748B;
+}
+
+.author-desc {
+  color: #94A3B8;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+/* Post CTA */
+.post-cta {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ready-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.pulse-dot {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #1E293B;
+  position: relative;
+}
+
+.ready-left h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+  color: #fff;
+}
+
+.ready-left p {
+  color: #94A3B8;
+  font-size: 0.875rem;
+}
+
+.ready-btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-outline {
+  padding: 0.75rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.btn-outline:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.btn-solid {
+  padding: 0.75rem 1.5rem;
+  background: white;
+  color: black;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.btn-solid:hover {
+  background: #f1f5f9;
+}
+
+@media (max-width: 768px) {
+  .post-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .post-title {
+    font-size: 2.5rem;
+  }
+  .post-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+}

@@ -1,0 +1,14 @@
+<article class="blog-card">
+  <div class="blog-image">
+    <img src="{{ include.image | relative_url }}" alt="{{ include.title }}">
+  </div>
+  <div class="blog-content">
+    <div class="blog-meta">
+      <span class="blog-tag {{ include.tag | downcase }}">{{ include.tag }}</span>
+      <span class="blog-date">{{ include.date }}</span>
+    </div>
+    <h3 class="blog-title">{{ include.title }}</h3>
+    <p class="blog-desc">{{ include.desc }}</p>
+    <a href="{{ include.url | relative_url }}" class="blog-link">READ MORE</a>
+  </div>
+</article>
