@@ -39,10 +39,13 @@
 .projects-filter {
   display: flex;
   gap: 0.5rem;
-  background: var(--nav-bg);
+  background: var(--glass-bg);
   padding: 0.5rem;
   border-radius: 9999px;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
 }
 
 .filter-btn {
@@ -67,7 +70,7 @@
 
 .filter-btn:hover, .filter-btn.active {
   color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-bg-hover);
 }
 
 .filter-btn.active svg {
@@ -81,18 +84,23 @@
 }
 
 .bento-card {
-  background: #0d1217;
-  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 1.5rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.3s ease, border-color 0.3s ease;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
 }
 
 .bento-card:hover {
   transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 15px 30px var(--accent-glow);
 }
 
 .span-1 { grid-column: span 1; }
@@ -125,17 +133,17 @@
   background-color: #1a202c;
   background-size: cover;
   background-position: center;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .horizontal-card .bento-img {
   border-bottom: none;
 }
 .horizontal-card:not(.flip) .bento-img {
-  border-right: 1px solid var(--border-color);
+  border-right: 1px solid var(--glass-border);
 }
 .horizontal-card.flip .bento-img {
-  border-left: 1px solid var(--border-color);
+  border-left: 1px solid var(--glass-border);
 }
 
 .bento-content {

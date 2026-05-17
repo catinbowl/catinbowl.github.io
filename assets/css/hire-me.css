@@ -41,10 +41,20 @@
 }
 
 .rate-card {
-  background: rgba(4, 31, 31, 0.4);
-  border: 1px solid rgba(45, 212, 191, 0.2);
+  background: rgba(4, 31, 31, 0.45);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(45, 212, 191, 0.25);
   border-radius: 1.5rem;
   padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(4, 31, 31, 0.3), var(--glass-shadow);
+  transition: all 0.3s ease;
+}
+
+.rate-card:hover {
+  background: rgba(4, 31, 31, 0.55);
+  border-color: rgba(45, 212, 191, 0.45);
+  box-shadow: 0 15px 45px rgba(45, 212, 191, 0.15);
 }
 
 .rate-badge {
@@ -148,10 +158,20 @@
 }
 
 .guarantee-card {
-  background: #0f172a;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   border-radius: 1.5rem;
   padding: 1.5rem;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
+}
+
+.guarantee-card:hover {
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.1);
 }
 
 .guarantee-header {
@@ -296,14 +316,21 @@
 
 .btn-outline {
   padding: 0.75rem 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 2rem;
   font-size: 0.875rem;
   font-weight: 600;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  transform: translateY(-1px);
 }
 
 .btn-solid {

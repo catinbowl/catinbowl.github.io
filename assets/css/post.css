@@ -114,8 +114,10 @@
 }
 
 .post-content pre {
-  background: #0f172a;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(15, 23, 42, 0.45);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
   padding: 1.25rem;
   border-radius: 0.75rem;
   overflow-x: auto;
@@ -123,6 +125,13 @@
   font-family: 'Fira Code', monospace;
   font-size: 0.85rem;
   color: #e2e8f0;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
+}
+
+.post-content pre:hover {
+  border-color: var(--glass-border-hover);
+  background: rgba(15, 23, 42, 0.55);
 }
 
 .post-content code {
@@ -142,12 +151,22 @@
 
 /* Sidebar - Author Card */
 .author-card {
-  background: rgba(4, 31, 31, 0.4);
-  border: 1px solid rgba(45, 212, 191, 0.2);
+  background: rgba(4, 31, 31, 0.45);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid rgba(45, 212, 191, 0.25);
   border-radius: 1.5rem;
   padding: 2rem;
   position: sticky;
   top: 6rem;
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
+}
+
+.author-card:hover {
+  background: rgba(4, 31, 31, 0.55);
+  border-color: rgba(45, 212, 191, 0.45);
+  box-shadow: 0 15px 35px rgba(45, 212, 191, 0.15);
 }
 
 .author-badge {
@@ -235,15 +254,22 @@
 
 .btn-outline {
   padding: 0.75rem 1.5rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 2rem;
   font-size: 0.875rem;
   font-weight: 600;
   color: #fff;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  transform: translateY(-1px);
 }
 
 .btn-solid {

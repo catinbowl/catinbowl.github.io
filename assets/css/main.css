@@ -22,6 +22,83 @@ body.dark {
 body.light {
   background-color: var(--light-background);
   color: var(--light-on-background);
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-bg-hover: rgba(255, 255, 255, 0.55);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-border-hover: rgba(0, 0, 0, 0.16);
+  --glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.06);
+}
+
+/* Animated Background Blobs */
+.glass-blobs {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(140px);
+  opacity: 0.15;
+  mix-blend-mode: screen;
+  animation: float 25s infinite alternate ease-in-out;
+}
+
+.dark .blob {
+  opacity: 0.15;
+  mix-blend-mode: screen;
+}
+
+.light .blob {
+  opacity: 0.06;
+  mix-blend-mode: multiply;
+}
+
+.blob-1 {
+  top: -10%;
+  left: -10%;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, var(--accent-color) 0%, transparent 70%);
+  animation-duration: 20s;
+}
+
+.blob-2 {
+  bottom: -10%;
+  right: -10%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, #8b5cf6 0%, transparent 70%); /* Violet glow */
+  animation-duration: 28s;
+  animation-delay: -5s;
+}
+
+.blob-3 {
+  top: 40%;
+  left: 50%;
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, #ec4899 0%, transparent 70%); /* Pink glow */
+  animation-duration: 24s;
+  animation-delay: -10s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(5vw, 5vh) scale(1.15);
+  }
+  100% {
+    transform: translate(-3vw, -5vh) scale(0.95);
+  }
 }
 
 h1, h2, h3, h4 {
@@ -43,19 +120,16 @@ a {
 
 /* Header */
 header {
-  padding: 1.5rem 0;
+  padding: 1.25rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
-  backdrop-filter: blur(10px);
-}
-
-.dark header {
-  background: color-mix(in srgb, var(--dark-background), transparent 50%);
-}
-
-.light header {
-  background: color-mix(in srgb, var(--light-background), transparent 50%);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  background: var(--glass-bg);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
 }
 
 .nav-wrapper {
@@ -83,7 +157,10 @@ nav {
   gap: 0.5rem;
   padding: 0.25rem;
   border-radius: 9999px;
-  border: 1px solid var(--dark-outline);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
 }
 
 nav a {
@@ -91,6 +168,7 @@ nav a {
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .dark nav a {
@@ -103,7 +181,7 @@ nav a {
 
 nav a:hover, nav a.active {
   color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-bg-hover);
 }
 
 .hire-me-btn {
@@ -111,23 +189,22 @@ nav a:hover, nav a.active {
   align-items: center;
   gap: 0.5rem;
   padding: 0.625rem 1.25rem;
-  background: transparent;
-  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 600;
-}
-
-.dark .hire-me-btn {
-  border-color: var(--dark-outline);
-}
-
-.light .hire-me-btn {
-  border-color: var(--light-outline);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
 }
 
 .hire-me-btn:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 0 15px var(--accent-glow);
+  transform: translateY(-1px);
 }
 
 /* Hero Section */
@@ -180,15 +257,21 @@ nav a:hover, nav a.active {
   align-items: center;
   gap: 0.75rem;
   padding: 0.875rem 2rem;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid var(--border-color);
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
   border-radius: 0.75rem;
   font-weight: 600;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  transition: all 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
   transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Hero Right Side (Code Window) */
@@ -197,12 +280,14 @@ nav a:hover, nav a.active {
 }
 
 .code-window {
-  background: #0d1117;
+  background: rgba(13, 17, 23, 0.45);
   border-radius: 1rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--glass-border);
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  transition: transform 0.2s ease-in-out;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  transition: transform 0.25s ease-in-out, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .code-window:nth-child(1) {
@@ -222,16 +307,19 @@ nav a:hover, nav a.active {
 }
 
 .code-window:hover {
-  transform: rotateZ(0deg);
+  transform: rotateZ(0deg) translateY(-4px);
+  background: rgba(13, 17, 23, 0.55);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
 .code-header {
   padding: 0.75rem 1rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.04);
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--glass-border);
 }
 
 .dot {
@@ -332,17 +420,21 @@ nav a:hover, nav a.active {
 }
 
 .project-card {
-  background: var(--card-bg);
+  background: var(--glass-bg);
   border-radius: 1.25rem;
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--glass-border);
   overflow: hidden;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
   transition: all 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  background: var(--glass-bg-hover);
+  border-color: var(--glass-border-hover);
+  box-shadow: 0 20px 30px var(--accent-glow);
 }
 
 .project-img {
